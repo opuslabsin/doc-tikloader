@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="These instructions will help you in setup server and mobile application.">
+<meta name="keywords" content=" ">
+<title>Tikloader Documentation | Yoohoo Documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="doc-yoohoo" href="opuslabsin.github.io/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top" style="min-height:75px;">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img style="height:50px;" src="images/company_logo.png" alt="Company logo"/></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" style="margin-top:12px;">
+                <!-- toggle sidebar button -->
+                <!--<li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>-->
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li><a href="https://opuslabs.freshdesk.com/" target="_blank">Support</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+
+        <!-- Content Column -->
+        <div class="col-md-12" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Tikloader Documentation</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">These instructions will help you in setup server and mobile application.</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+
+    
+
+  <h1 id="introduction">Introduction</h1>
+<p>Tikloader is a TikTok videos download manager.</p>
+
+<h1 id="setup">Setup</h1>
+
+<ol>
+  <li>
+    <h3 id="android">Android</h3>
+    <p><strong>*Note: Phone Authentication or some other functionality will not work on emulator. Kindly use real physical device for testing.</strong></p>
+
+    <p>Before continuing make sure you have :-</p>
+    <ul>
+      <li><strong>Firebase Account</strong> <a href="https://console.firebase.google.com">https://console.firebase.google.com</a></li>
+      <li><strong>SHA-1 fingerprint of your machine</strong> <a href="https://cloud.google.com/solutions/mobile/mobile-firebase-app-engine-flexible#generating_a_sha-1_fingerprint_for_the_app">https://cloud.google.com/solutions/mobile/mobile-firebase-app-engine-flexible#generating_a_sha-1_fingerprint_for_the_app</a></li>
+    </ul>
+
+    <p>After following the steps given below make sure you have values of all the following keys with you:</p>
+    <ul>
+      <li><strong>applicationId</strong></li>
+      <li><strong>app_name</strong></li>
+      <li><strong>ad_unit_id</strong></li>
+    </ul>
+
+    <p>You will need to update above values in <code class="highlighter-rouge">app/build.gradle</code></p>
+
+    <p><strong><code class="highlighter-rouge">Refactoring</code></strong></p>
+    <ul>
+      <li>Change the <code class="highlighter-rouge">applicationId</code> in <code class="highlighter-rouge">app/build.gradle</code>, set this to the package name you want to keep for your application e.g com.tikloader</li>
+      <li>Use the same package name while setting up android app in Firebase in the next step.</li>
+      <li>Logo and placeholders used in app are png images which you will find in <code class="highlighter-rouge">app/src/main/res/drawable</code> folder.</li>
+      <li>To change the images in app simply replace the images at above mentioned location with your images.</li>
+    </ul>
+
+    <p><strong><code class="highlighter-rouge">Firebase Setup</code></strong></p>
+    <ul>
+      <li>
+        <p>Create a Firebase account or log into an existing account.</p>
+      </li>
+      <li>
+        <p>Click <strong>Add project</strong>. Follow the remaining setup steps and click <strong>Create project</strong>.</p>
+      </li>
+    </ul>
+    <p align="center"><img src="images/8.1-firebase-create-project.png" /></p>
+
+    <ul>
+      <li>
+        <p>After the wizard provisions your project, click Continue.</p>
+      </li>
+      <li>
+        <p>In the Overview page of your project, click the Settings gear and then click Project settings.</p>
+      </li>
+      <li>
+        <p>Click Add Firebase to your Android app and follow the wizard</p>
+      </li>
+    </ul>
+    <p align="center"><img src="images/8.3-firebase-add-android-app.png" /></p>
+
+    <ul>
+      <li>
+        <p>In Debug signing certificate SHA-1, enter the SHA-1 value you generated in the previous section.</p>
+      </li>
+      <li>
+        <p>Click Register app.</p>
+      </li>
+      <li>
+        <p>Download the google-services.json file and place it in <code class="highlighter-rouge">app</code> folder.</p>
+      </li>
+    </ul>
+    <p align="center"><img src="images/8.4-firebase-download-config-json.png" /></p>
+
+    <ul>
+      <li>Click Next in the Download config file section and follow the rest of the steps if required.</li>
+    </ul>
+
+    <p><strong><code class="highlighter-rouge">Configuration</code></strong> and <strong><code class="highlighter-rouge">AdMob setup</code></strong></p>
+    <ul>
+      <li>Open <code class="highlighter-rouge">app/build.gradle</code>, you need to edit/add values in respective fields in <code class="highlighter-rouge">defaultConfig</code> under <code class="highlighter-rouge">android</code></li>
+      <li>Fill in <code class="highlighter-rouge">applicationId</code> with your package name which you registered on firebase console</li>
+      <li>Fill in <code class="highlighter-rouge">app_name</code> with your desired app name</li>
+      <li>Make sure <code class="highlighter-rouge">ENABLE_ADMOB</code> is set to “true” if you desire to setup AdMob in your application. Else set it to “false” to disable AdMob</li>
+      <li>If you choosen to setup AdMob, mention your banner add unit id in app level build.gradle file <code class="highlighter-rouge">ad_unit_id</code> and <code class="highlighter-rouge">com.google.android.gms.ads.APPLICATION_ID</code>’s value in AndroidManifst.xml file.</li>
+    </ul>
+
+    <p><strong><code class="highlighter-rouge">Useful links</code></strong></p>
+    <ul>
+      <li>SHA-1 key related
+        <ul>
+          <li><a href="https://cloud.google.com/solutions/mobile/mobile-firebase-app-engine-flexible#generating_a_sha-1_fingerprint_for_the_app">https://cloud.google.com/solutions/mobile/mobile-firebase-app-engine-flexible#generating_a_sha-1_fingerprint_for_the_app</a></li>
+          <li><a href="https://developers.google.com/android/guides/client-auth">https://developers.google.com/android/guides/client-auth</a></li>
+          <li><a href="https://medium.com/pen-bold-kiln-press/sha-1-android-studio-ec02fb893e72">https://medium.com/pen-bold-kiln-press/sha-1-android-studio-ec02fb893e72</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Note: If you are unable to understand any topic or find any topic needs more elaboration. 
+Please raise an issue ticket at this link <a href="https://opuslabs.freshdesk.com">https://opuslabs.freshdesk.com</a></strong></p>
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2020 Opus Labs. All rights reserved. <br />
+ Site last generated: May 19, 2020 <br />
+<p><img src="images/company_logo_dark.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-122814558-2','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+</html>
