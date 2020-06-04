@@ -194,27 +194,14 @@ $('#toc').on('click', 'a', function() {
 <ol>
   <li>
     <h3 id="android">Android</h3>
-    <p>Before continuing make sure you have :-</p>
+    <p><strong><code class="highlighter-rouge">Basic requirements</code></strong></p>
     <ul>
+      <li><strong>GIT Setup</strong> <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+      <li><strong>Java Development Kit</strong> <a href="https://www.oracle.com/java/technologies/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/javase-jdk8-downloads.html</a></li>
+      <li><strong>Android Studio</strong> <a href="https://developer.android.com/studio">https://developer.android.com/studio</a></li>
       <li><strong>Firebase Account</strong> <a href="https://console.firebase.google.com">https://console.firebase.google.com</a></li>
       <li><strong>SHA-1 fingerprint of your machine</strong> <a href="https://cloud.google.com/solutions/mobile/mobile-firebase-app-engine-flexible#generating_a_sha-1_fingerprint_for_the_app">https://cloud.google.com/solutions/mobile/mobile-firebase-app-engine-flexible#generating_a_sha-1_fingerprint_for_the_app</a></li>
-    </ul>
-
-    <p>After following the steps given below make sure you have values of all the following keys with you:</p>
-    <ul>
-      <li><strong>applicationId</strong></li>
-      <li><strong>app_name</strong></li>
-      <li><strong>ad_unit_id</strong></li>
-    </ul>
-
-    <p>You will need to update above values in <code class="highlighter-rouge">app/build.gradle</code></p>
-
-    <p><strong><code class="highlighter-rouge">Refactoring</code></strong></p>
-    <ul>
-      <li>Change the <code class="highlighter-rouge">applicationId</code> in <code class="highlighter-rouge">app/build.gradle</code>, set this to the package name you want to keep for your application e.g com.tikloader</li>
-      <li>Use the same package name while setting up android app in Firebase in the next step.</li>
-      <li>Logo and placeholders used in app are png images which you will find in <code class="highlighter-rouge">app/src/main/res/drawable</code> folder.</li>
-      <li>To change the images in app simply replace the images at above mentioned location with your images.</li>
+      <li><strong>SHA-1 fingerprint of your release key for release build</strong> <a href="https://stackoverflow.com/questions/3997748/how-can-i-create-a-keystore">https://stackoverflow.com/questions/3997748/how-can-i-create-a-keystore</a></li>
     </ul>
 
     <p><strong><code class="highlighter-rouge">Firebase Setup</code></strong></p>
@@ -258,13 +245,122 @@ $('#toc').on('click', 'a', function() {
       <li>Click Next in the Download config file section and follow the rest of the steps if required.</li>
     </ul>
 
-    <p><strong><code class="highlighter-rouge">Configuration</code></strong> and <strong><code class="highlighter-rouge">AdMob setup</code></strong></p>
+    <p><strong><code class="highlighter-rouge">Project Setup</code></strong></p>
     <ul>
+      <li>Open android studio.</li>
+      <li>Click on Open an existing project and Select the source code.</li>
+      <li>Open app level build.gradle to edit with your values.</li>
+    </ul>
+
+    <p>Values you’ll be needing:</p>
+    <ul>
+      <li><strong>applicationId</strong></li>
+      <li><strong>app_name</strong></li>
+      <li><strong>ad_unit_id</strong></li>
+    </ul>
+
+    <p><strong><code class="highlighter-rouge">Refactoring</code></strong></p>
+    <ul>
+      <li>Logo and placeholders used in app are png images which you will find in <code class="highlighter-rouge">app/src/main/res/drawable</code> folder.</li>
+      <li>To change the images in app simply replace the images at above mentioned location with your images.</li>
+      <li>To change application launcher icon change <code class="highlighter-rouge">ic_launcher.png</code> in
+        <ul>
+          <li><strong>mipmap-hdpi</strong></li>
+          <li><strong>mipmap-mdpi</strong></li>
+          <li><strong>mipmap-xhdpi</strong></li>
+          <li><strong>mipmap-xxhdpi</strong></li>
+          <li><strong>mipmap-xxxhdpi</strong></li>
+        </ul>
+      </li>
+      <li>To change application colors, change values in <code class="highlighter-rouge">app/src/main/res/values/colors.xml</code></li>
+      <li>To change application strings, change values in <code class="highlighter-rouge">app/src/main/res/values/strings.xml</code></li>
+      <li>Currently application supports 6 Languages
+        <ul>
+          <li><strong>English</strong></li>
+          <li><strong>Arabic</strong></li>
+          <li><strong>Spanish</strong></li>
+          <li><strong>French</strong></li>
+          <li><strong>Indonesian</strong></li>
+          <li><strong>Portuguese</strong></li>
+        </ul>
+      </li>
+    </ul>
+
+    <p><strong><code class="highlighter-rouge">Configuration</code></strong></p>
+    <ul>
+      <li>Open android studio.</li>
+      <li>Click on Open an existing project and Select the source code.</li>
+      <li>Open app level build.gradle to edit with your values.</li>
       <li>Open <code class="highlighter-rouge">app/build.gradle</code>, you need to edit/add values in respective fields in <code class="highlighter-rouge">defaultConfig</code> under <code class="highlighter-rouge">android</code></li>
       <li>Fill in <code class="highlighter-rouge">applicationId</code> with your package name which you registered on firebase console</li>
       <li>Fill in <code class="highlighter-rouge">app_name</code> with your desired app name</li>
-      <li>Make sure <code class="highlighter-rouge">ENABLE_ADMOB</code> is set to “true” if you desire to setup AdMob in your application. Else set it to “false” to disable AdMob</li>
-      <li>If you choosen to setup AdMob, mention your banner add unit id in app level build.gradle file <code class="highlighter-rouge">ad_unit_id</code> and <code class="highlighter-rouge">com.google.android.gms.ads.APPLICATION_ID</code>’s value in AndroidManifst.xml file.</li>
+    </ul>
+
+    <p><strong><code class="highlighter-rouge">AdMob setup</code></strong></p>
+    <ul>
+      <li>Open android studio.</li>
+      <li>Click on Open an existing project and Select the source code.</li>
+      <li>Open app level build.gradle to edit with your values.</li>
+      <li>Make sure <code class="highlighter-rouge">ENABLE_ADMOB</code> is set to <code class="highlighter-rouge">true</code> if you desire to setup AdMob in your application.</li>
+      <li>If not, set it to “false” to disable AdMob</li>
+      <li>If <code class="highlighter-rouge">ENABLE_ADMOB</code> is set to <code class="highlighter-rouge">true</code>, mention your banner add unit id in <code class="highlighter-rouge">ad_unit_id</code></li>
+      <li>Open <code class="highlighter-rouge">app/src/main/AndroidManifest.xml</code></li>
+      <li>Mention your AdMob application id in <code class="highlighter-rouge">com.google.android.gms.ads.APPLICATION_ID</code>’s value in AndroidManifst.xml file.</li>
+    </ul>
+
+    <p><strong><code class="highlighter-rouge">Build App</code></strong></p>
+    <ul>
+      <li>Open android studio.</li>
+      <li>Click on Open an existing project and Select the source code.</li>
+      <li>In the toolbar, select your app from the run configurations drop-down menu.</li>
+      <li>From the target device drop-down menu, select the device that you want to run your app on.</li>
+      <li>Click run.</li>
+      <li>For more info <a href="https://developer.android.com/studio/run">https://developer.android.com/studio/run</a></li>
+    </ul>
+
+    <p><strong><code class="highlighter-rouge">Generate Keystore</code></strong></p>
+    <ul>
+      <li>In the menu bar, click Build &gt; Build &gt; Generate Signed Bundle/APK.</li>
+      <li>In the Generate Signed Bundle or APK dialog, select Android App Bundle or APK and click Next.</li>
+      <li>Below the field for Key store path, click Create new.</li>
+      <li>On the New Key Store window, provide the following information for your keystore and key</li>
+      <li>Key store path: Select the location where your keystore should be created.</li>
+      <li>Password: Create and confirm a secure password for your keystore.</li>
+      <li>Alias: Enter an identifying name for your key.</li>
+      <li>Password: Create and confirm a secure password for your key. This should be different from the password you chose for your keystore.</li>
+      <li>Validity (years): Set the length of time in years that your key will be valid. Your key should be valid for at least 25 years, so you can sign app updates with the same key through the lifespan of your app.</li>
+      <li>Certificate: Enter some information about yourself for your certificate. This information is not displayed in your app, but is included in your certificate as part of the APK.</li>
+      <li>Once you complete the form, click OK.</li>
+    </ul>
+
+    <p><strong><code class="highlighter-rouge">Build Signed Apk</code></strong></p>
+    <ul>
+      <li>Build &gt; Generate Signed Bundle/APK.</li>
+      <li>In the Generate Signed Bundle or APK dialog, select either Android App Bundle or APK and click Next.</li>
+      <li>Select a module from the drop down.</li>
+      <li>Specify the path to your keystore, the alias for your key, and enter the passwords for both.</li>
+      <li>If you are building and signing an APK, you need to select which Signature Versions you want your app to support.</li>
+      <li>Click Finish.</li>
+    </ul>
+
+    <p><strong><code class="highlighter-rouge">Publish App</code></strong></p>
+    <ul>
+      <li>Create a Developer Account <a href="https://play.google.com/apps/publish">https://play.google.com/apps/publish</a></li>
+      <li>Create an App</li>
+      <li>Prepare Store Listing
+        <ul>
+          <li>Product Details</li>
+          <li>Graphic Assets</li>
+          <li>Languages &amp; Translations</li>
+          <li>Categorization</li>
+          <li>Contact Details</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </li>
+      <li>Upload APK to an App Release</li>
+      <li>Provide an Appropriate Content Rating</li>
+      <li>Set Up Pricing &amp; Distribution</li>
+      <li>Rollout Release to Publish Your App</li>
     </ul>
 
     <p><strong><code class="highlighter-rouge">Useful links</code></strong></p>
@@ -272,10 +368,19 @@ $('#toc').on('click', 'a', function() {
       <li>SHA-1 key related
         <ul>
           <li><a href="https://cloud.google.com/solutions/mobile/mobile-firebase-app-engine-flexible#generating_a_sha-1_fingerprint_for_the_app">https://cloud.google.com/solutions/mobile/mobile-firebase-app-engine-flexible#generating_a_sha-1_fingerprint_for_the_app</a></li>
-          <li><a href="https://developers.google.com/android/guides/client-auth">https://developers.google.com/android/guides/client-auth</a></li>
           <li><a href="https://medium.com/pen-bold-kiln-press/sha-1-android-studio-ec02fb893e72">https://medium.com/pen-bold-kiln-press/sha-1-android-studio-ec02fb893e72</a></li>
         </ul>
       </li>
+      <li>Keystore
+        <ul>
+          <li><a href="https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html">https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html</a></li>
+          <li><a href="https://stackoverflow.com/questions/31048208/zipalign-command-not-found">https://stackoverflow.com/questions/31048208/zipalign-command-not-found</a></li>
+        </ul>
+      </li>
+      <li>Build
+    - <a href="https://developer.android.com/studio/run">https://developer.android.com/studio/run</a>
+    - <a href="https://developer.android.com/studio/publish/app-signing">https://developer.android.com/studio/publish/app-signing</a></li>
+      <li>Publish <a href="https://themanifest.com/mobile-apps/how-publish-app-google-play-step-step-guide">https://themanifest.com/mobile-apps/how-publish-app-google-play-step-step-guide</a></li>
     </ul>
   </li>
 </ol>
